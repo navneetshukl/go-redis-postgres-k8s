@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: app-pod
+  label:
+    name: app
+
+spec:
+  containers:
+  - name: app-container
+    image: navneetshukla/go-docker-k8s

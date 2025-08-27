@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgres-pod
+  label:
+    name: db
+
+spec:
+  containers:
+    - name: postgres-container
+      image: postgres:latest

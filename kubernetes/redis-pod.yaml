@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: redis-pod
+  label:
+    name: db
+
+spec:
+  containers:
+    - name: redis-container
+      image: redis:latest
