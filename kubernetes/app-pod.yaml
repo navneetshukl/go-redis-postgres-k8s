@@ -8,5 +8,22 @@ metadata:
 
 spec:
   containers:
-  - name: app-container
-    image: navneetshukla/go-docker-k8s
+    - name: app-container
+      image: navneetshukla/go-docker-k8s
+
+      env:
+        # These env vars are for YOUR GO APP to connect to PostgreSQL
+        - name: POSTGRES_HOST
+          value: "postgres-service" # Service name
+        - name: POSTGRES_PORT
+          value: "5432"
+        - name: POSTGRES_USER
+          value: "postgres" # Must match postgres pod's POSTGRES_USER
+        - name: POSTGRES_PASSWORD
+          value: "password" # Must match postgres pod's POSTGRES_PASSWORD
+        - name: POSTGRES_DB
+          value: "testdb" # Must match postgres pod's POSTGRES_DB
+        - name: REDIS_HOST
+          value: "redis-service"
+        - name: REDIS_PORT
+          value: "6379"
