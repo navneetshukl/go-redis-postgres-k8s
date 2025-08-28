@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Services
+
+metadata:
+  name: postgres-service
+
+spec: 
+  selector:
+    name: db
+  ports:
+  - port: 5555
+    targetPort: 5432

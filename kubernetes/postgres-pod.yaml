@@ -9,3 +9,13 @@ spec:
   containers:
     - name: postgres-container
       image: postgres:latest
+
+  env:
+  - name: POSTGRES_DB
+    value: testdb
+
+  - name: POSTGRES_USER
+    value: postgres
+
+  - name: POSTGRES_PASSWORD
+    value: password
