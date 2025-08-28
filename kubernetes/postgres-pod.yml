@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: postgres-pod
-  label:
+  labels:
     name: db
 
 spec:
@@ -10,12 +10,12 @@ spec:
     - name: postgres-container
       image: postgres:latest
 
-  env:
-  - name: POSTGRES_DB
-    value: testdb
+      env:
+        - name: POSTGRES_DB
+          value: testdb
 
-  - name: POSTGRES_USER
-    value: postgres
+        - name: POSTGRES_USER
+          value: postgres
 
-  - name: POSTGRES_PASSWORD
-    value: password
+        - name: POSTGRES_PASSWORD
+          value: password
